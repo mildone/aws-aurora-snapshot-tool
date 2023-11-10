@@ -84,7 +84,7 @@ def filter_clusters(pattern, cluster_list):
 
 def get_snapshot_identifier(snapshot):
     # Function that will return the Snapshot identifier given an ARN
-    match = re.match('arn:aws:rds:.*:.*:cluster-snapshot:(.+)',
+    match = re.match('arn:aws-cn:rds:.*:.*:cluster-snapshot:(.+)',
                      snapshot['DBClusterSnapshotArn'])
     return match.group(1)
 

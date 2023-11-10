@@ -230,7 +230,7 @@
 						"Action": "sts:AssumeRole"
 					}]
 				},
-				"ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
+				"ManagedPolicyArns": ["arn:aws-cn:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
 				"Policies": [{
 					"PolicyName": "inline_policy_snapshots_aurora_rds",
 					"PolicyDocument": {
@@ -255,8 +255,8 @@
 									"rds:AddTagsToResource"
 								],
 								"Resource": [
-									"arn:aws:rds:*:*:cluster:*",
-									"arn:aws:rds:*:*:cluster-snapshot:*"
+									"arn:aws-cn:rds:*:*:cluster:*",
+									"arn:aws-cn:rds:*:*:cluster-snapshot:*"
 								]
 
 							}
@@ -279,7 +279,7 @@
 									"kms:DescribeKey"
 								],
 								"Resource": [
-									"arn:aws:kms:*:*:key/*"
+									"arn:aws-cn:kms:*:*:key/*"
 								]
 							},
 								{
@@ -291,7 +291,7 @@
 										"kms:RevokeGrant"
 									],
 									"Resource": [
-										"arn:aws:kms:*:*:key/*"
+										"arn:aws-cn:kms:*:*:key/*"
 									],
 									"Condition": {
 										"Bool": {

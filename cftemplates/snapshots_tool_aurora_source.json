@@ -276,7 +276,7 @@
 						"Action": "sts:AssumeRole"
 					}]
 				},
-				"ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
+				"ManagedPolicyArns": ["arn:aws-cn:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"],
 				"Policies": [{
 					"PolicyName": "inline_policy_snapshots_aurora_rds",
 					"PolicyDocument": {
@@ -300,7 +300,7 @@
 									"rds:AddTagsToResource"
 								],
 								"Resource": [{
-									"Fn::Join": [":", ["arn:aws:rds", {
+									"Fn::Join": [":", ["arn:aws-cn:rds", {
 										"Fn::If": ["RegionOverridden", {
 											"Ref": "SourceRegionOverride"
 										}, {
@@ -309,7 +309,7 @@
 									}, "*:cluster:*"]]
 								},
 									{
-										"Fn::Join": [":", ["arn:aws:rds", {
+										"Fn::Join": [":", ["arn:aws-cn:rds", {
 											"Fn::If": ["RegionOverridden", {
 												"Ref": "SourceRegionOverride"
 											}, {
